@@ -1,0 +1,19 @@
+.list {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.morning {
+    background-color: rgb(160, 160, 253);
+    color: rgb(20, 20, 20);
+}
+
+.afternoon {
+    background-color: rgb(251, 211, 174);
+    color: rgb(20, 20, 20);
+}
+
+.night {
+    background-color: rgb(25, 25, 88);
+    color: white;
+}
