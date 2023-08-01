@@ -1,19 +1,21 @@
-.list {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.morning {
-    background-color: rgb(160, 160, 253);
-    color: rgb(20, 20, 20);
-}
-
-.afternoon {
-    background-color: rgb(251, 211, 174);
-    color: rgb(20, 20, 20);
-}
-
-.night {
-    background-color: rgb(25, 25, 88);
+.weather-card {
+    /* Common styles for all time of the day */
+    color: black;
+    padding: 20px;
+  }
+  
+  .weather-card.morning {
+    /* Styles for morning time */
+    background-color: #eee;
+  }
+  
+  .weather-card.afternoon {
+    /* Styles for afternoon time */
+    background-color: rgb(171, 209, 255);
+  }
+  
+  .weather-card.night {
+    /* Styles for night time */
+    background-color: rgb(92, 92, 255);
     color: white;
-}
+  }

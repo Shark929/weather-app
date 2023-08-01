@@ -2,27 +2,19 @@ import React from 'react';
 import "./index.css";
 import moment from 'moment';
 import { Card } from 'semantic-ui-react';
+import SunPng from '../assets/sun.png';
+import MoonPng from '../assets/moon.png';
 
 const ListComponent = ({ weatherData }) => {
 
-    const getTimeOfDay = () => {
-        const hour = moment(weatherData.dt_txt).hour();
-        if (hour >= 5 && hour < 12) {
-            return 'morning';
-        } else if (hour >= 12 && hour < 18) {
-            return 'afternoon';
-        } else {
-            return 'night';
-        }
-    };
-
-    const timeOfDay = getTimeOfDay();
-
-
     return (
-        <Card style={{ marginLeft: 'auto', marginRight: 'auto', }}>
+        <Card className={`weather-card`} style={{ marginLeft: 'auto', marginRight: 'auto', }}>
             <Card.Content>
-                <Card.Header className='header'>{weatherData.name}
+                <Card.Header className='header'>
+                    {
+                        moment(weatherData.dt_txt).hour() >= 5 && moment(weatherData.dt_txt).hour() < 18 ? (<img alt='Day' src={SunPng} width='24px' />) : (<img alt='Day' src={MoonPng} width='24px' />)
+                    }
+                    {weatherData.name}
                     <p>Date: {moment().format('LL')} ({moment().format('dddd')})</p></Card.Header>
                 <Card.Description>
                     <p>Description: {weatherData.weather[0].main}</p>
